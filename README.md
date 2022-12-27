@@ -129,7 +129,7 @@ certainty = [15192, 1349]
 ```
 3) DACON Score : 0.71
 
-### 6. Winner's method
+### 5. Winner's method
 This method is the method of the team that won this competition. <br>
 - Citation : <https://github.com/HaloKim/competitions> <br>
 1.	 Text Augmentation <br>
