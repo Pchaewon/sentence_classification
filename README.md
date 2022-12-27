@@ -74,7 +74,7 @@ The following attempts were made to apply KOBERT to the competition. <br>
 2) Loss 
    - CrossEntropyLoss
    - weighted cross entropy 
-   > weight 인자에 클래스별 가중치 전달 : 데이터 비율에 맞게 학습되는 정도 조정
+   > Passing the weight for each class to the weight factor: Adjusting the degree of learning according to the data ratio
 ```bash
 type = [575, 13558, 257, 2151]
 polarity = [15793, 183, 565]
@@ -93,7 +93,7 @@ certainty = [15192, 1349]
 2) Loss 
    - CrossEntropyLoss
    - weighted cross entropy
-   > weight 인자에 클래스별 가중치 전달 : 학습되는 정도를 적당한 비율로 했을때
+   > Passing the weight for each class to the weight factor: when the learning rate is set at an appropriate rate
 ```bash
 type = [0.2270, 0.2525, 0.2550, 0.2655]
 polarity = [0.2270, 0.2525, 0.2550]
@@ -112,7 +112,7 @@ certainty = [0.2270, 0.2525]
 2) Loss 
    - CrossEntropyLoss
    - weighted cross entropy
-   > weight 인자에 클래스별 가중치 전달 : 데이터 비율에 맞게 학습되는 정도 조정
+   > Passing the weight for each class to the weight factor: Adjusting the degree of learning according to the data ratio
 ```bash
 type = [575, 13558, 257, 2151]
 polarity = [15793, 183, 565]
