@@ -53,8 +53,8 @@ This method is the method of the team that won this competition. <br>
 3.	Customize model layers <br>
 -	Residual Blocks <br>
 4.	Change loss function <br>
--	[Focal Loss] (https://github.com/Alibaba-MIIL/ASL/blob/main/src/loss_functions/losses.py) <br>
--	[Asymmetric Loss] (https://paperswithcode.com/paper/asymmetric-loss-for-multi-label) <br>
+-	[Focal Loss](https://github.com/Alibaba-MIIL/ASL/blob/main/src/loss_functions/losses.py) <br>
+-	[Asymmetric Loss](https://paperswithcode.com/paper/asymmetric-loss-for-multi-label) <br>
 5.	Fold(just 5 folds) <br>
 6.	Huggingface Custom Trainer <br>
 
