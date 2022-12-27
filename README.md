@@ -44,3 +44,17 @@ The following attempts were made to apply KOBERT to the competition. <br>
 6.	Use cosine_schedule_with_warmup as scheduler <br>
  <img width="678" alt="aa" src="https://user-images.githubusercontent.com/77375401/209630110-f5e9e91b-c9ce-4a9a-bddc-da3986cc9c2e.png">
 7. The training performance is evaluated by separating the validation set from the training set <br>
+
+### 6. Winner's method
+This method is the method of the team that won this competition. <br>
+1.	 Text Augmentation <br>
+-	replaced 2 words in one sentence and made 2 or 3 sentences.(randomly) <br>
+2.	Ensemble <br>
+3.	Customize model layers <br>
+-	Residual Blocks <br>
+4.	Change loss function <br>
+-	[Focal Loss] (https://github.com/Alibaba-MIIL/ASL/blob/main/src/loss_functions/losses.py) <br>
+-	[Asymmetric Loss] (https://paperswithcode.com/paper/asymmetric-loss-for-multi-label) <br>
+5.	Fold(just 5 folds) <br>
+6.	Huggingface Custom Trainer <br>
+
