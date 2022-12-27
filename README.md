@@ -58,3 +58,6 @@ This method is the method of the team that won this competition. <br>
 5.	Fold(just 5 folds) <br>
 6.	Huggingface Custom Trainer <br>
 
+### Citeation
+<https://github.com/HaloKim/competitions>
+
