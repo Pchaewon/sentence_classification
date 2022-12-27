@@ -47,7 +47,7 @@ The following attempts were made to apply KOBERT to the competition. <br>
 
 ### 6. Winner's method
 This method is the method of the team that won this competition. <br>
-- Citeation : <https://github.com/HaloKim/competitions> <br>
+- Citation : <https://github.com/HaloKim/competitions> <br>
 1.	 Text Augmentation <br>
 -	replaced 2 words in one sentence and made 2 or 3 sentences.(randomly) <br>
 2.	Ensemble <br>
