@@ -30,6 +30,8 @@ After sentence vectorization using TfidfVectorizer, the shape examined is as fol
 print(train_vec.shape, val_vec.shape, test_vec.shape)
 # (13232, 9351) (3309, 9351) (7090, 9351)
 ```
+
+
 ### 3. LSTM based model <br>
 1) Hyper Parameter Setting
    - EPOCHS : 100
@@ -49,11 +51,11 @@ print(train_vec.shape, val_vec.shape, test_vec.shape)
 
 4) DACON Score : 0.5
 
-### 4. KOBERT <br>
-Before explaining [KOBERT](https://github.com/SKTBrain/KoBERT), I will explain BERT. BERT stands for Bidirectional Encouragement Representations from Transformer, and is a model for processing natural languages by checking text in both directions. And since it is an open source developed by Google, it has the advantage that anyone can use a good performance model.
+### 4. KoBERT <br>
+Before explaining [KoBERT](https://github.com/SKTBrain/KoBERT), I will explain BERT. BERT stands for Bidirectional Encouragement Representations from Transformer, and is a model for processing natural languages by checking text in both directions. And since it is an open source developed by Google, it has the advantage that anyone can use a good performance model.
 However, since BERT was pre-trained in English, it is difficult to apply Korean. Therefore, SKT Brain team developed a Korean version of the natural language processing model.   <br>
 ******
-The following attempts were made to apply KOBERT to the competition. <br>
+The following attempts were made to apply KoBERT to the competition. <br>
 1. Transform the Label Encoder by type <br>
 2. Concatenate the sentence with Label Encoder and put it as input <br>
 3. We judged that the four types had no covariance and used their own separate models. <br>
@@ -121,7 +123,7 @@ certainty = [15192, 1349]
 ```
 3) DACON Score : 0.65
 
-### 7. Winner's method
+### 6. Winner's method
 This method is the method of the team that won this competition. <br>
 - Citation : <https://github.com/HaloKim/competitions> <br>
 1.	 Text Augmentation <br>
