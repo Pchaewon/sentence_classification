@@ -64,7 +64,6 @@ The following attempts were made to apply KOBERT to the competition. <br>
 7. The training performance is evaluated by separating the validation set from the training set <br>
 
 ### 5. Roberta based model <br>
-******
 #### 1. Robert-Small based model <br>
 1) Hyper Parameter Setting
    - EPOCHS : 100
@@ -83,7 +82,7 @@ tense = [8032, 1643, 6866]
 certainty = [15192, 1349]
 ```
 3) DACON Score : 0.5
-******
+
 #### 2. Robert-large based model(1) <br>
 1) Hyper Parameter Setting
    - EPOCHS : 100
@@ -102,7 +101,7 @@ tense = [0.2270, 0.2525, 0.2550]
 certainty = [0.2270, 0.2525]
 ```
 3) DACON Score : 0.61
-******
+
 #### 3. Robert-large based model(2) <br>
 1) Hyper Parameter Setting
    - EPOCHS : 100
