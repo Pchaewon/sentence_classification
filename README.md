@@ -30,3 +30,17 @@ After sentence vectorization using TfidfVectorizer, the shape examined is as fol
 print(train_vec.shape, val_vec.shape, test_vec.shape)
 # (13232, 9351) (3309, 9351) (7090, 9351)
 ```
+
+### 4. KOBERT <br>
+Before explaining [KOBERT](https://github.com/SKTBrain/KoBERT), I will explain BERT. BERT stands for Bidirectional Encouragement Representations from Transformer, and is a model for processing natural languages by checking text in both directions. And since it is an open source developed by Google, it has the advantage that anyone can use a good performance model.
+However, since BERT was pre-trained in English, it is difficult to apply Korean. Therefore, SKT Brain team developed a Korean version of the natural language processing model.   <br>
+******
+The following attempts were made to apply KOBERT to the competition. <br>
+1. Transform the Label Encoder by type <br>
+2. Concatenate the sentence with Label Encoder and put it as input <br>
+3. We judged that the four types had no covariance and used their own separate models. <br>
+4. Cross Entropy was used as Loss, and the weight was passed by class to improve performance by adjusting the degree of learning according to the data ratio <br>
+5. Using AdamW as Optimizer <br>
+6.	Use cosine_schedule_with_warmup as scheduler <br>
+ <img width="678" alt="aa" src="https://user-images.githubusercontent.com/77375401/209630110-f5e9e91b-c9ce-4a9a-bddc-da3986cc9c2e.png">
+7. The training performance is evaluated by separating the validation set from the training set <br>
