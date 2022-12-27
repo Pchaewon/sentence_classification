@@ -30,6 +30,24 @@ After sentence vectorization using TfidfVectorizer, the shape examined is as fol
 print(train_vec.shape, val_vec.shape, test_vec.shape)
 # (13232, 9351) (3309, 9351) (7090, 9351)
 ```
+### 3. LSTM based model <br>
+1) Hyper Parameter Setting
+- EPOCHS : 100
+- LEARNING_RATE : 1e-4
+- BATCH_SIZE : 256
+- SEED : 41
+- input_dim : 9351
+- data_dim : 9351
+- hidden_dim : 200
+- seq_length : 200
+
+2) Model Structure
+- Add LSTM, Dropout Layer
+
+3) Loss 
+- CrossEntropyLoss
+
+4) DACON Score : 0.5
 
 ### 4. KOBERT <br>
 Before explaining [KOBERT](https://github.com/SKTBrain/KoBERT), I will explain BERT. BERT stands for Bidirectional Encouragement Representations from Transformer, and is a model for processing natural languages by checking text in both directions. And since it is an open source developed by Google, it has the advantage that anyone can use a good performance model.
@@ -45,7 +63,65 @@ The following attempts were made to apply KOBERT to the competition. <br>
  <img width="678" alt="aa" src="https://user-images.githubusercontent.com/77375401/209630110-f5e9e91b-c9ce-4a9a-bddc-da3986cc9c2e.png">
 7. The training performance is evaluated by separating the validation set from the training set <br>
 
-### 6. Winner's method
+### 5. Roberta based model <br>
+#### 1. Robert-Small based model <br>
+1) Hyper Parameter Setting
+- EPOCHS : 100
+- LEARNING_RATE : 0.1
+- BATCH_SIZE : 20
+- SEED : 41
+
+2) Loss 
+- CrossEntropyLoss
+- weighted cross entropy 
+> weight 인자에 클래스별 가중치 전달 : 데이터 비율에 맞게 학습되는 정도 조정
+```bash
+type = [575, 13558, 257, 2151]
+polarity = [15793, 183, 565]
+tense = [8032, 1643, 6866]
+certainty = [15192, 1349]
+```
+3) DACON Score : 0.5
+
+#### 2. Robert-large based model(1) <br>
+1) Hyper Parameter Setting
+- EPOCHS : 100
+- LEARNING_RATE : 0.1
+- BATCH_SIZE : 20
+- SEED : 41
+
+2) Loss 
+- CrossEntropyLoss
+- weighted cross entropy
+> weight 인자에 클래스별 가중치 전달 : 학습되는 정도를 적당한 비율로 했을때
+```bash
+type = [0.2270, 0.2525, 0.2550, 0.2655]
+polarity = [0.2270, 0.2525, 0.2550]
+tense = [0.2270, 0.2525, 0.2550]
+certainty = [0.2270, 0.2525]
+```
+3) DACON Score : 0.61
+
+#### 3. Robert-large based model(2) <br>
+1) Hyper Parameter Setting
+- EPOCHS : 100
+- LEARNING_RATE : 0.1
+- BATCH_SIZE : 20
+- SEED : 41
+
+2) Loss 
+- CrossEntropyLoss
+- weighted cross entropy
+> weight 인자에 클래스별 가중치 전달 : 데이터 비율에 맞게 학습되는 정도 조정
+```bash
+type = [575, 13558, 257, 2151]
+polarity = [15793, 183, 565]
+tense = [8032, 1643, 6866]
+certainty = [15192, 1349]
+```
+3) DACON Score : 0.65
+
+### 7. Winner's method
 This method is the method of the team that won this competition. <br>
 - Citation : <https://github.com/HaloKim/competitions> <br>
 1.	 Text Augmentation <br>
@@ -58,6 +134,8 @@ This method is the method of the team that won this competition. <br>
 -	[Asymmetric Loss](https://paperswithcode.com/paper/asymmetric-loss-for-multi-label) <br>
 5.	Fold(just 5 folds) <br>
 6.	Huggingface Custom Trainer <br>
+
+
 
 
 
