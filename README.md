@@ -3,7 +3,7 @@
    A model development competition to classify the type, tense, polarity, and certainty of input sentences.<br>
   
 ## Setup:
-   pip install -r requirements.txt 
+    pip install -r requirements.txt 
 
 ### 1. Dataset <br>
 A total of 3 csv files are provided in the competition. <br>
